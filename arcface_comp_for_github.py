@@ -213,7 +213,7 @@ perte_william = loss.forward(res_william.squeeze(), torch_labels)
 print("perte william : ", perte_william)
 
 
-model_head_wujiyan = ArcMarginProduct_wujiyang(out_feature=emb_size,in_feature=num_clases,  kernel=manual_kernel,
+model_head_wujiyan = ArcMarginProduct_wujiyang(out_feature=num_classes, in_feature=emb_size,  kernel=manual_kernel,
                                                s= 64)
 res_wujiyang = model_head_wujiyan.forward(torch_embeddings, torch_labels)
 perte_wujiyang = loss.forward(res_wujiyang, torch_labels)
